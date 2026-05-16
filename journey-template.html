@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+  TEMPLATE FOR NEW JOURNEY ENTRIES
+  ================================
+  How to use:
+  1. Copy this file into /journey/week-X/index.html
+  2. Replace all [PLACEHOLDER] markers with actual content
+  3. Update JSON-LD at the bottom with correct dates and headline
+  4. Update prev/next navigation links at the bottom
+  5. Update the sitemap.xml in the root with the new URL
+-->
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9SBN6G5QV"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9SBN6G5QV');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>[ARTICLE_TITLE] | My GLP-1 Journey | LeanOnGLP1.com</title>
+  <meta name="description" content="[META_DESCRIPTION_150_CHARS]">
+  <meta name="author" content="LeanOnGLP1.com">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.leanonglp1.com/journey/week-X/">
+
+  <meta property="og:title" content="[ARTICLE_TITLE]">
+  <meta property="og:description" content="[META_DESCRIPTION_150_CHARS]">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.leanonglp1.com/journey/week-X/">
+  <meta property="og:site_name" content="LeanOnGLP1.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M30 50 Q30 30 50 30 Q70 30 70 50 L70 65 Q70 72 63 72 L50 72 L50 60 Q57 60 57 53 Q57 46 50 46 Q43 46 43 53 L43 72 L37 72 Q30 72 30 65 Z' fill='%2341b883'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="stylesheet" href="/journey/journey-style.css">
+</head>
+<body>
+
+<nav class="sticky-nav">
+  <a href="/" class="nav-logo">LeanOnGLP1<span>.com</span></a>
+  <div class="nav-links">
+    <a href="/#protocol">Protocol</a>
+    <a href="/#mealplan">Meal Plan</a>
+    <a href="/#supplements">Supplements</a>
+    <a href="/#training">Training</a>
+    <a href="/#journey">My Journey</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#calculator" class="nav-cta">Calculator</a>
+  </div>
+  <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/#protocol">Protocol</a>
+  <a href="/#mealplan">Meal Plan</a>
+  <a href="/#supplements">Supplements</a>
+  <a href="/#training">Training</a>
+  <a href="/#journey">My Journey</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/#calculator" class="mobile-menu-cta">Calculator</a>
+</div>
+
+<article>
+
+  <header class="article-hero">
+    <div class="article-hero-inner">
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#journey">My Journey</a> &rsaquo; Week [X]
+      </div>
+      <div class="article-meta">
+        <span class="article-tag">Week [X]</span>
+        <span class="article-date">[PUBLICATION_DATE]</span>
+        <span class="article-readtime">&#x23F1; [READ_TIME] min read</span>
+      </div>
+      <h1>[ARTICLE_H1_TITLE]</h1>
+      <p class="article-lede">[LEDE_PARAGRAPH]</p>
+    </div>
+  </header>
+
+  <div class="article-body">
+
+    <!-- QUICK STATS GRID -->
+    <div class="tip-grid">
+      <div class="tip">
+        <div class="tip-num">&#x1F489;</div>
+        <div class="tip-title">Dose</div>
+        <div class="tip-text">[DOSE_INFO]</div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">&#x2696;&#xFE0F;</div>
+        <div class="tip-title">Weight</div>
+        <div class="tip-text">[WEIGHT_INFO]</div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">&#x1F957;</div>
+        <div class="tip-title">Protein</div>
+        <div class="tip-text">[PROTEIN_INFO]</div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">&#x1F3CB;&#xFE0F;</div>
+        <div class="tip-title">Training</div>
+        <div class="tip-text">[TRAINING_INFO]</div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT - replace these with actual sections -->
+    <h2>[SECTION_HEADING_1]</h2>
+    <p>[PARAGRAPH_1]</p>
+    <p>[PARAGRAPH_2]</p>
+
+    <div class="highlight">
+      <strong>[HIGHLIGHT_LABEL]</strong>
+      <p>[HIGHLIGHT_CONTENT]</p>
+    </div>
+
+    <h2>[SECTION_HEADING_2]</h2>
+    <p>[MORE_CONTENT]</p>
+
+    <!-- END OF ARTICLE -->
+
+    <div class="tip-jar">
+      <span>&#x1F964; Found this helpful? The whole site stays free &mdash;</span>
+      <a href="https://buymeacoffee.com/leanonglp1" target="_blank" rel="noopener">buy me a protein shake</a>
+    </div>
+
+  </div>
+
+  <!-- PREV / NEXT NAVIGATION -->
+  <nav class="article-nav">
+    <a href="/journey/week-[PREV]/">
+      <div class="article-nav-label">&larr; Previous</div>
+      <div class="article-nav-title">Week [PREV] &mdash; [PREV_TITLE]</div>
+    </a>
+    <a href="/journey/week-[NEXT]/" class="article-nav-next">
+      <div class="article-nav-label">Next &rarr;</div>
+      <div class="article-nav-title">Week [NEXT] &mdash; [NEXT_TITLE]</div>
+    </a>
+  </nav>
+
+  <div class="back-to-all">
+    <a href="/#journey">&larr; Back to all entries</a>
+  </div>
+
+</article>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="disclaimer">
+      <strong style="color:#ef5350;">Important Medical Disclaimer</strong><br><br>
+      This website provides <strong>informational and educational content only</strong>. It is <strong>not medical advice</strong>. The author is not a doctor or registered dietitian. GLP-1 medications have individual effects &mdash; <strong>always consult your physician</strong> before making changes to your diet, exercise, or medication.
+    </div>
+    <div class="footer-bottom">
+      <div style="font-weight:700;font-size:1rem;margin-bottom:0.5vh;">LeanOnGLP1.com</div>
+      &copy; 2026 LeanOnGLP1.com | All rights reserved
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu(){
+  var menu=document.getElementById('mobileMenu');
+  var btn=document.getElementById('hamburgerBtn');
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+</script>
+
+<!-- JSON-LD: replace fields when copying -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"[ARTICLE_TITLE]","datePublished":"[PUBLICATION_DATE_ISO]","dateModified":"[PUBLICATION_DATE_ISO]","description":"[META_DESCRIPTION_150_CHARS]","url":"https://www.leanonglp1.com/journey/week-X/","author":{"@type":"Person","name":"Anonymous"},"publisher":{"@type":"Organization","name":"LeanOnGLP1.com","url":"https://www.leanonglp1.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.leanonglp1.com/journey/week-X/"},"keywords":"[KEYWORDS]"}
+</script>
+
+</body>
+</html>
