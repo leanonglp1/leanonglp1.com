@@ -1,0 +1,8 @@
+# robots.txt for leanonglp1.com
+# Allow all search engines to index everything
+
+User-agent: *
+Allow: /
+
+# Point to sitemap
+Sitemap: https://www.leanonglp1.com/sitemap.xml
