@@ -1147,6 +1147,116 @@ function toggleBlog(cardId) {
 document.getElementById('heightCm').addEventListener('keypress',function(e){if(e.key==='Enter')document.getElementById('weightKg').focus();});
 document.getElementById('weightKg').addEventListener('keypress',function(e){if(e.key==='Enter')calcProtein();});
 window.addEventListener('scroll',function(){var nav=document.getElementById('nav');if(window.scrollY>100)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+
+/* ==================== GOOGLE ANALYTICS EVENT TRACKING ==================== */
+
+/* Hero CTA - Calculate My Protein Needs button */
+document.querySelector('.hero-cta').addEventListener('click', function() {
+  gtag('event', 'click_hero_cta', {
+    'event_category': 'engagement',
+    'event_label': 'Calculate My Protein Needs (hero)'
+  });
+});
+
+/* Nav Calculator button - track when people use the nav CTA */
+document.querySelector('.nav-cta').addEventListener('click', function() {
+  gtag('event', 'click_nav_cta', {
+    'event_category': 'engagement',
+    'event_label': 'Calculator (nav)'
+  });
+});
+
+/* Track actual calculator usage (button click on calculate) */
+var origCalcProtein = calcProtein;
+calcProtein = function() {
+  var unit = currentUnit;
+  var h = unit === 'metric' ? document.getElementById('heightCm').value : (document.getElementById('heightFt').value || '') + 'ft' + (document.getElementById('heightIn').value || '0') + 'in';
+  var w = unit === 'metric' ? document.getElementById('weightKg').value : document.getElementById('weightLbs').value;
+  if (h && w) {
+    gtag('event', 'calculator_used', {
+      'event_category': 'engagement',
+      'event_label': 'unit_' + unit
+    });
+  }
+  origCalcProtein();
+};
+
+/* Track journey card clicks */
+document.querySelectorAll('.blog-card[href]').forEach(function(card) {
+  card.addEventListener('click', function() {
+    var title = this.querySelector('.blog-title');
+    var tag = this.querySelector('.blog-tag');
+    gtag('event', 'journey_click', {
+      'event_category': 'engagement',
+      'event_label': tag ? tag.textContent : (title ? title.textContent : 'unknown')
+    });
+  });
+});
+
+/* Track BMAC (donation) clicks */
+document.querySelectorAll('a[href*="buymeacoffee.com"]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    gtag('event', 'bmac_click', {
+      'event_category': 'conversion',
+      'event_label': 'Buy Me a Protein Shake'
+    });
+  });
+});
+
+/* Track external links (YouTube tutorials, references, etc) */
+document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    var url = this.href;
+    var category = 'external_link';
+    if (url.indexOf('youtube.com') > -1) category = 'youtube_video';
+    else if (url.indexOf('doi.org') > -1 || url.indexOf('pmc.ncbi') > -1) category = 'scientific_reference';
+    gtag('event', 'external_click', {
+      'event_category': category,
+      'event_label': url
+    });
+  });
+});
+
+/* Scroll depth tracking - fires at 25%, 50%, 75%, 100% */
+var scrollMarks = {25: false, 50: false, 75: false, 100: false};
+window.addEventListener('scroll', function() {
+  var scrollPct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+  [25, 50, 75, 100].forEach(function(mark) {
+    if (scrollPct >= mark && !scrollMarks[mark]) {
+      scrollMarks[mark] = true;
+      gtag('event', 'scroll_depth', {
+        'event_category': 'engagement',
+        'event_label': mark + '%',
+        'value': mark
+      });
+    }
+  });
+});
+
+/* Time on page - fires at 30s, 1min, 3min, 5min */
+var timeMarks = [30, 60, 180, 300];
+timeMarks.forEach(function(seconds) {
+  setTimeout(function() {
+    gtag('event', 'time_on_page', {
+      'event_category': 'engagement',
+      'event_label': seconds + 's',
+      'value': seconds
+    });
+  }, seconds * 1000);
+});
+
+/* FAQ engagement - track which questions get opened */
+document.querySelectorAll('.faq-q').forEach(function(faq) {
+  faq.addEventListener('click', function() {
+    var question = this.querySelector('.faq-q-text');
+    if (question && !this.closest('.faq-item').classList.contains('active')) {
+      gtag('event', 'faq_open', {
+        'event_category': 'engagement',
+        'event_label': question.textContent.substring(0, 80)
+      });
+    }
+  });
+});
 </script>
 
 <script type="application/ld+json">

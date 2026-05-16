@@ -173,6 +173,57 @@ function toggleMobileMenu(){
   menu.classList.toggle('open');
   btn.classList.toggle('open');
 }
+
+/* ==================== GOOGLE ANALYTICS EVENT TRACKING ==================== */
+
+/* Track BMAC (donation) clicks */
+document.querySelectorAll('a[href*="buymeacoffee.com"]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    gtag('event', 'bmac_click', {
+      'event_category': 'conversion',
+      'event_label': 'Buy Me a Protein Shake (journey entry)'
+    });
+  });
+});
+
+/* Track prev/next navigation between entries */
+document.querySelectorAll('.article-nav a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    var title = this.querySelector('.article-nav-title');
+    gtag('event', 'journey_navigation', {
+      'event_category': 'engagement',
+      'event_label': title ? title.textContent : 'unknown'
+    });
+  });
+});
+
+/* Scroll depth on journey entries */
+var scrollMarks = {25: false, 50: false, 75: false, 100: false};
+window.addEventListener('scroll', function() {
+  var scrollPct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+  [25, 50, 75, 100].forEach(function(mark) {
+    if (scrollPct >= mark && !scrollMarks[mark]) {
+      scrollMarks[mark] = true;
+      gtag('event', 'scroll_depth', {
+        'event_category': 'engagement',
+        'event_label': 'journey_' + mark + '%',
+        'value': mark
+      });
+    }
+  });
+});
+
+/* Time on journey page - reading time indicator */
+[30, 60, 180].forEach(function(seconds) {
+  setTimeout(function() {
+    gtag('event', 'time_on_journey', {
+      'event_category': 'engagement',
+      'event_label': seconds + 's',
+      'value': seconds
+    });
+  }, seconds * 1000);
+});
+
 </script>
 
 <script type="application/ld+json">
