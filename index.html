@@ -865,13 +865,13 @@
         </div>
         <div style="display:flex;gap:2vw;flex-wrap:wrap;">
           <div style="text-align:center;">
-            <div style="font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;color:var(--accent);line-height:1;">111<span style="font-size:1rem;font-weight:600;color:var(--text-muted);"> kg</span></div>
-            <div style="font-size:0.85rem;color:var(--text-muted);font-weight:600;margin-top:0.2vh;">245 lbs</div>
+            <div style="font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;color:var(--accent);line-height:1;">110<span style="font-size:1rem;font-weight:600;color:var(--text-muted);"> kg</span></div>
+            <div style="font-size:0.85rem;color:var(--text-muted);font-weight:600;margin-top:0.2vh;">243 lbs</div>
             <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:0.3vh;">Current</div>
           </div>
           <div style="text-align:center;">
-            <div style="font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;color:var(--purple);line-height:1;">&minus;7.5<span style="font-size:1rem;font-weight:600;color:var(--text-muted);"> kg</span></div>
-            <div style="font-size:0.85rem;color:var(--text-muted);font-weight:600;margin-top:0.2vh;">&minus;16.5 lbs</div>
+            <div style="font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;color:var(--purple);line-height:1;">&minus;8.5<span style="font-size:1rem;font-weight:600;color:var(--text-muted);"> kg</span></div>
+            <div style="font-size:0.85rem;color:var(--text-muted);font-weight:600;margin-top:0.2vh;">&minus;18.7 lbs</div>
             <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:0.3vh;">Total lost</div>
           </div>
         </div>
@@ -906,41 +906,46 @@
           </g>
 
           <!-- Filled area under line -->
-          <path d="M 100,40 L 245,40 L 390,79 L 535,103 L 680,113 L 680,260 L 100,260 Z" fill="url(#weightFillGrad)"/>
+          <path d="M 100,45 L 216,45 L 332,83 L 448,106 L 564,116 L 680,125 L 680,260 L 100,260 Z" fill="url(#weightFillGrad)"/>
 
           <!-- Main weight line -->
-          <path d="M 100,40 L 245,40 L 390,79 L 535,103 L 680,113" fill="none" stroke="#41b883" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 100,45 L 216,45 L 332,83 L 448,106 L 564,116 L 680,125" fill="none" stroke="#41b883" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 
           <!-- Data points with values -->
           <g>
             <!-- Week 0: 118.5 kg (start) -->
-            <circle cx="100" cy="40" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
-            <text x="100" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">118.5</text>
+            <circle cx="100" cy="45" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
+            <text x="100" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">118.5</text>
 
-            <!-- Week 1: 118.5 kg (no real measurement) -->
-            <circle cx="245" cy="40" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
-            <text x="245" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">118.5</text>
+            <!-- Week 1: 118.5 kg -->
+            <circle cx="216" cy="45" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
+            <text x="216" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">118.5</text>
 
-            <!-- Week 2: 114.5 kg (-4) -->
-            <circle cx="390" cy="79" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
-            <text x="390" y="64" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">114.5</text>
+            <!-- Week 2: 114.5 kg -->
+            <circle cx="332" cy="83" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
+            <text x="332" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">114.5</text>
 
-            <!-- Week 3: 112 kg (-2.5) -->
-            <circle cx="535" cy="103" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
-            <text x="535" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">112</text>
+            <!-- Week 3: 112 kg -->
+            <circle cx="448" cy="106" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
+            <text x="448" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">112</text>
 
-            <!-- Week 4: 111 kg (-1) -->
-            <circle cx="680" cy="113" r="7" fill="#41b883" stroke="#ffffff" stroke-width="3"/>
-            <text x="680" y="98" text-anchor="middle" font-size="13" font-weight="800" fill="#41b883" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">111</text>
+            <!-- Week 4: 111 kg -->
+            <circle cx="564" cy="116" r="6" fill="#ffffff" stroke="#41b883" stroke-width="3"/>
+            <text x="564" y="101" text-anchor="middle" font-size="12" font-weight="700" fill="#1a202c" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">111</text>
+
+            <!-- Week 5: 110 kg (newest) -->
+            <circle cx="680" cy="125" r="7" fill="#41b883" stroke="#ffffff" stroke-width="3"/>
+            <text x="680" y="110" text-anchor="middle" font-size="13" font-weight="800" fill="#41b883" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">110</text>
           </g>
 
           <!-- X-axis labels -->
           <g font-size="11" fill="#718096" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-weight="600">
             <text x="100" y="275" text-anchor="middle">Start</text>
-            <text x="245" y="275" text-anchor="middle">Week 1</text>
-            <text x="390" y="275" text-anchor="middle">Week 2</text>
-            <text x="535" y="275" text-anchor="middle">Week 3</text>
-            <text x="680" y="275" text-anchor="middle">Week 4</text>
+            <text x="216" y="275" text-anchor="middle">Week 1</text>
+            <text x="332" y="275" text-anchor="middle">Week 2</text>
+            <text x="448" y="275" text-anchor="middle">Week 3</text>
+            <text x="564" y="275" text-anchor="middle">Week 4</text>
+            <text x="680" y="275" text-anchor="middle">Week 5</text>
           </g>
         </svg>
       </div>
@@ -953,7 +958,24 @@
 
     <div class="blog-grid">
 
-      <!-- Week 4 - Most recent -->
+      <!-- Week 5 - Most recent -->
+      <a href="/journey/week-5/" class="blog-card" style="text-decoration:none;color:inherit;display:block;">
+        <div class="blog-card-header">
+          <div class="blog-meta">
+            <span class="blog-tag">Week 5</span>
+            <span class="blog-date">May 22, 2026</span>
+            <span class="blog-readtime">&#x23F1; 5 min read</span>
+          </div>
+          <h3 class="blog-title">Week 5: Birthdays Survived, a Burger Lesson Learned, and a Hard Truth</h3>
+          <p class="blog-excerpt">110 kg on the scale. Sixth injection done. A week of family birthday cakes survived with small bites, a hamburger fadäs taught me about fatty food, and an honest reflection on what this medication actually is.</p>
+          <div class="blog-expand-btn">
+            Read full entry
+            <span class="blog-expand-icon">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Week 4 -->
       <a href="/journey/week-4/" class="blog-card" style="text-decoration:none;color:inherit;display:block;">
         <div class="blog-card-header">
           <div class="blog-meta">
@@ -1043,10 +1065,10 @@
         <div class="blog-card-header">
           <div class="blog-meta">
             <span class="blog-tag" style="background:#aaa;">Coming Next</span>
-            <span class="blog-date">Week 5</span>
+            <span class="blog-date">Week 6</span>
           </div>
-          <h3 class="blog-title" style="color:var(--text-muted);">Week 5 &mdash; Stomach Injection Results</h3>
-          <p class="blog-excerpt" style="color:var(--text-muted);">First week of stomach injection. Watching whether appetite stays controlled. Updated weekly.</p>
+          <h3 class="blog-title" style="color:var(--text-muted);">Week 6 &mdash; Halfway Through Month Two</h3>
+          <p class="blog-excerpt" style="color:var(--text-muted);">Halfway point of my chosen 12-week stretch at 2.5 mg. Time to assess and decide what month two looks like. Updated weekly.</p>
         </div>
       </div>
 
@@ -1266,7 +1288,7 @@ document.querySelectorAll('.faq-q').forEach(function(faq) {
 {"@context":"https://schema.org","@type":"WebApplication","name":"GLP-1 Protein Calculator","url":"https://www.leanonglp1.com/#calculator","description":"Free protein calculator for GLP-1 medication users. Calculates optimal daily protein intake based on Adjusted Body Weight to prevent muscle loss on Ozempic, Wegovy or Mounjaro.","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["Adjusted Body Weight protein calculator","Metric and imperial units","Personalized per-meal protein targets","Sample meal plan","Supplement stack guide","Strength training protocol","Side effect management","Sleep optimization","Weekly GLP-1 journey log"]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Blog","name":"My GLP-1 Journey","url":"https://www.leanonglp1.com/#journey","description":"Anonymous weekly journal documenting a real GLP-1 treatment experience — side effects, weight loss, training, and nutrition on Mounjaro","blogPost":[{"@type":"BlogPosting","headline":"Week 4: One Month In — 7.5 kg Down, First Cracks in Discipline","datePublished":"2026-05-15","dateModified":"2026-05-15","description":"One month review on GLP-1 treatment at 2.5 mg. Down 7.5 kg total, clothes fitting differently, training schedule held. First signs of returning appetite and a couple of off-protocol evenings — an honest first-month report.","url":"https://www.leanonglp1.com/journey/week-4/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 one month results, Mounjaro 4 weeks weight loss, GLP-1 appetite return, low dose GLP-1 long term, GLP-1 discipline mindset"},{"@type":"BlogPosting","headline":"Week 3: Finding the Rhythm — and Choosing to Stay at 2.5 mg","datePublished":"2026-05-08","dateModified":"2026-05-08","description":"Week 3 update on GLP-1 treatment. No side effects, sweet cravings still suppressed, 1 kg down this week. Decision made with doctor to stay at 2.5 mg longer rather than titrate up.","url":"https://www.leanonglp1.com/journey/week-3/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 week 3, Mounjaro 2.5 mg dose, GLP-1 titration decision, low dose GLP-1, sustainable weight loss"},{"@type":"BlogPosting","headline":"Week 2: Second Injection, First Real Drop on the Scale","datePublished":"2026-05-01","dateModified":"2026-05-01","description":"Week 2 update on GLP-1 treatment at 2.5 mg. Second injection was uneventful, 4 kg down on the scale (mostly water), strength training going well with bodyweight movements feeling lighter.","url":"https://www.leanonglp1.com/journey/week-2/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 week 2, Mounjaro 2.5 mg, GLP-1 weight loss, GLP-1 hydration, tirzepatide diary"},{"@type":"BlogPosting","headline":"Week 1: First Injection, First Side Effects, First Real Test","datePublished":"2026-04-24","dateModified":"2026-04-24","description":"Week 1 report after starting GLP-1 treatment at 2.5 mg. First side effects, appetite suppression, and full protocol adherence with strength training maintained.","url":"https://www.leanonglp1.com/journey/week-1/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 week 1, Mounjaro 2.5 mg, first injection side effects, GLP-1 weight loss diary"},{"@type":"BlogPosting","headline":"Before I Start: Why I'm Doing This, and What to Expect","datePublished":"2026-04-08","dateModified":"2026-04-08","description":"An anonymous introduction to a real GLP-1 treatment journey — starting weight, health diagnoses, training background and what to expect in weekly updates.","url":"https://www.leanonglp1.com/journey/week-0/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 journey, Mounjaro start, GLP-1 weight loss diary, tirzepatide experience"}]}
+{"@context":"https://schema.org","@type":"Blog","name":"My GLP-1 Journey","url":"https://www.leanonglp1.com/#journey","description":"Anonymous weekly journal documenting a real GLP-1 treatment experience — side effects, weight loss, training, and nutrition on Mounjaro","blogPost":[{"@type":"BlogPosting","headline":"Week 5: Birthdays Survived, a Burger Lesson Learned, and a Hard Truth","datePublished":"2026-05-22","dateModified":"2026-05-22","description":"Week 5 on GLP-1 treatment at 2.5 mg. Down to 110 kg, 8.5 kg total. Navigated a week of birthday cakes successfully, learned a hard lesson about fatty food, and trap bar training is paying off. Plus an honest reflection on what GLP-1 medication actually is.","url":"https://www.leanonglp1.com/journey/week-5/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 week 5, Mounjaro 2.5 mg results, GLP-1 birthday eating, GLP-1 fatty food nausea, GLP-1 lifestyle change"},{"@type":"BlogPosting","headline":"Week 4: One Month In — 7.5 kg Down, First Cracks in Discipline","datePublished":"2026-05-15","dateModified":"2026-05-15","description":"One month review on GLP-1 treatment at 2.5 mg. Down 7.5 kg total, clothes fitting differently, training schedule held. First signs of returning appetite and a couple of off-protocol evenings — an honest first-month report.","url":"https://www.leanonglp1.com/journey/week-4/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 one month results, Mounjaro 4 weeks weight loss, GLP-1 appetite return, low dose GLP-1 long term, GLP-1 discipline mindset"},{"@type":"BlogPosting","headline":"Week 3: Finding the Rhythm — and Choosing to Stay at 2.5 mg","datePublished":"2026-05-08","dateModified":"2026-05-08","description":"Week 3 update on GLP-1 treatment. No side effects, sweet cravings still suppressed, 1 kg down this week. Decision made with doctor to stay at 2.5 mg longer rather than titrate up.","url":"https://www.leanonglp1.com/journey/week-3/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 week 3, Mounjaro 2.5 mg dose, GLP-1 titration decision, low dose GLP-1, sustainable weight loss"},{"@type":"BlogPosting","headline":"Week 2: Second Injection, First Real Drop on the Scale","datePublished":"2026-05-01","dateModified":"2026-05-01","description":"Week 2 update on GLP-1 treatment at 2.5 mg. Second injection was uneventful, 4 kg down on the scale (mostly water), strength training going well with bodyweight movements feeling lighter.","url":"https://www.leanonglp1.com/journey/week-2/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 week 2, Mounjaro 2.5 mg, GLP-1 weight loss, GLP-1 hydration, tirzepatide diary"},{"@type":"BlogPosting","headline":"Week 1: First Injection, First Side Effects, First Real Test","datePublished":"2026-04-24","dateModified":"2026-04-24","description":"Week 1 report after starting GLP-1 treatment at 2.5 mg. First side effects, appetite suppression, and full protocol adherence with strength training maintained.","url":"https://www.leanonglp1.com/journey/week-1/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 week 1, Mounjaro 2.5 mg, first injection side effects, GLP-1 weight loss diary"},{"@type":"BlogPosting","headline":"Before I Start: Why I'm Doing This, and What to Expect","datePublished":"2026-04-08","dateModified":"2026-04-08","description":"An anonymous introduction to a real GLP-1 treatment journey — starting weight, health diagnoses, training background and what to expect in weekly updates.","url":"https://www.leanonglp1.com/journey/week-0/","author":{"@type":"Person","name":"Anonymous"},"keywords":"GLP-1 journey, Mounjaro start, GLP-1 weight loss diary, tirzepatide experience"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do I need more protein on GLP-1 medications like Ozempic or Mounjaro?","acceptedAnswer":{"@type":"Answer","text":"GLP-1 medications create a significant calorie deficit, which causes the body to break down muscle for energy. Without adequate protein (1.6g/kg of adjusted body weight) and resistance training, up to 40% of weight lost can be lean muscle mass. With the right protocol, muscle loss drops below 10% of total weight lost."}},{"@type":"Question","name":"How much protein should I eat on GLP-1 medication?","acceptedAnswer":{"@type":"Answer","text":"The evidence-based target is 1.6g of protein per kg of Adjusted Body Weight (ABW) per day, spread across 4-5 meals of 30-40g each. Use the free GLP-1 protein calculator on this page to find your personal target."}},{"@type":"Question","name":"Can too much protein damage my kidneys on GLP-1 medication?","acceptedAnswer":{"@type":"Answer","text":"For healthy individuals, no. Decades of research show 1.6g/kg of body weight is safe. The concern originated from studies on people with existing kidney disease. Stay well-hydrated with 2-3 liters of water daily to support kidney function on a high-protein diet."}},{"@type":"Question","name":"Do I really need to lift weights while on GLP-1 medication?","acceptedAnswer":{"@type":"Answer","text":"Yes. Resistance training sends a direct signal via the mTOR pathway telling your body to preserve muscle even during calorie restriction. Cardio does not provide this signal. Minimum 2-3 sessions per week with compound movements trained close to failure."}},{"@type":"Question","name":"What supplements should I take on GLP-1 medication?","acceptedAnswer":{"@type":"Answer","text":"The priority order is: 1) Creatine monohydrate 5g/day, 2) Vitamin D3 2000-5000 IU/day, 3) Electrolytes daily, 4) Magnesium bisglycinate 300-400mg before bed, 5) Omega-3 fish oil 1-2g EPA/DHA, 6) Multivitamin. Reduced food intake on GLP-1s makes supplementation important to prevent nutritional deficiencies."}},{"@type":"Question","name":"How do I hit my protein target when I have no appetite on GLP-1 medication?","acceptedAnswer":{"@type":"Answer","text":"Eat protein first at every meal before anything else. Use liquid protein sources on low-appetite days (clear whey isolate, Greek yogurt smoothies). Front-load protein intake before your injection day when appetite is best. Track protein intake for 2 weeks to understand your actual intake versus your target."}},{"@type":"Question","name":"What is Adjusted Body Weight and why is it used in the GLP-1 protein calculator?","acceptedAnswer":{"@type":"Answer","text":"Adjusted Body Weight (ABW) accounts for the fact that fat tissue requires less protein than muscle. Using total body weight would set an unrealistically high protein target. ABW = Ideal Body Weight + 0.25 × (Current Weight − Ideal Body Weight). This gives a practical, achievable target based on lean mass plus a portion of excess weight."}}]}
